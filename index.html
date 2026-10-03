@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edgar Solis | Cursos, Certificaciones & Portafolio</title>
+  <meta name="description" content="Landing page profesional de Edgar Solis. Cursos y certificaciones en Operating Systems Support, Operating Systems Basics, IoT, Redes Cisco, Desarrollo Web y Proyectos.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Header / Barra de Navegación -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#inicio" class="site-brand">
+        <span class="brand-icon">⚡</span>
+        <span class="site-title">Edev</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#cursos" class="nav-link">Cursos</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#habilidades" class="nav-link">Stack</a>
+        <a href="https://lolxde121.github.io/Blog_edev/" target="_blank" rel="noopener noreferrer" class="nav-link">Blog ↗</a>
+        <a href="https://github.com/lolxde121" target="_blank" rel="noopener noreferrer" class="nav-link">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container" id="inicio">
+
+    <!-- Hero / Información Personal -->
+    <section class="profile-section">
+      <div class="profile-card">
+        <div class="profile-avatar-wrapper">
+          <div class="profile-avatar-glow"></div>
+          <img
+            src="assets/mifotoV2.png"
+            alt="Foto de Edgar Solis"
+            class="profile-avatar-img"
+            width="125"
+            height="125"
+            onerror="this.src='https://avatars.githubusercontent.com/u/187986550?v=4'"
+          />
+        </div>
+
+        <div class="profile-info">
+          <span class="profile-status">
+            <span class="status-dot"></span>
+            Disponible para nuevos proyectos
+          </span>
+
+          <h1 class="profile-name">Edgar Solís Hernández</h1>
+          <p class="profile-role">Ingeniería en Tecnologías de la Información & Software Developer</p>
+          <p class="profile-bio">
+            Especializado en soporte y arquitectura de sistemas operativos (Linux/Windows), redes Cisco, infraestructura Cloud (AWS), Internet de las Cosas (IoT) y desarrollo web fullstack. Enfocado en soluciones de alto rendimiento, código limpio y automatización.
+          </p>
+
+          <div class="profile-tags">
+            <span class="profile-tag">Sistemas Operativos</span>
+            <span class="profile-tag">Cisco Networking</span>
+            <span class="profile-tag">Internet de las Cosas (IoT)</span>
+            <span class="profile-tag">Linux / AWS</span>
+            <span class="profile-tag">React / Next.js</span>
+            <span class="profile-tag">Java / Python</span>
+          </div>
+
+          <div class="profile-links">
+            <a href="#cursos" class="profile-link-btn btn-primary">
+              <span>🎓</span>
+              <span>Ver Cursos & Certificaciones</span>
+            </a>
+            <a href="https://github.com/lolxde121" target="_blank" rel="noopener noreferrer" class="profile-link-btn">
+              <span>💻</span>
+              <span>GitHub</span>
+            </a>
+            <button onclick="copyEmail()" class="profile-link-btn">
+              <span>✉️</span>
+              <span>Copiar Correo</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barra de Métricas Clave -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">6+</div>
+        <div class="stat-label">Cursos & Certificaciones</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Cisco & IT</div>
+        <div class="stat-label">Networking & Sistemas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">IoT & Cloud</div>
+        <div class="stat-label">Dispositivos & AWS</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Fullstack</div>
+        <div class="stat-label">Web & Backend Moderno</div>
+      </div>
+    </section>
+
+    <!-- Sección de Cursos y Certificaciones -->
+    <section class="section-wrapper" id="cursos">
+      <div class="section-header">
+        <h2 class="section-title">Cursos y Certificaciones</h2>
+      </div>
+      <p class="section-subtitle">
+        Formación continua y certificaciones oficiales en sistemas operativos, redes, Internet de las Cosas y desarrollo tecnológico.
+      </p>
+
+      <!-- Filtros de Categoría -->
+      <div class="category-filters">
+        <button class="filter-btn active" data-filter="all">Todos los Cursos</button>
+        <button class="filter-btn" data-filter="cisco-os">Sistemas & Cisco</button>
+        <button class="filter-btn" data-filter="iot">Internet de las Cosas (IoT)</button>
+        <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+        <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+      </div>
+
+      <!-- Grid dinámico de cursos -->
+      <div class="courses-grid" id="courses-list">
+        <!-- Generado dinámicamente por app.js -->
+      </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="section-wrapper" id="proyectos">
+      <div class="section-header">
+        <h2 class="section-title">Proyectos Destacados</h2>
+      </div>
+      <p class="section-subtitle">
+        Proyectos de software, sistemas distribuidos e ingeniería aplicada.
+      </p>
+
+      <div class="projects-grid">
+        <!-- SAM -->
+        <article class="project-card">
+          <h3 class="project-title">
+            <span>🐝</span> SAM · Smart Apiary Monitoring
+          </h3>
+          <p class="project-desc">
+            Sistema integral de monitoreo inteligente para la gestión de apiarios y colmenas. Backend desarrollado en Java con el framework Javalin, base de datos MariaDB y autenticación segura mediante JSON Web Tokens (JWT).
+          </p>
+          <div class="project-tags">
+            <span class="profile-tag">Java</span>
+            <span class="profile-tag">Javalin</span>
+            <span class="profile-tag">MariaDB</span>
+            <span class="profile-tag">JWT</span>
+            <span class="profile-tag">REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/lolxde121/SAM_frontend" target="_blank" rel="noopener noreferrer" class="project-link">
+              Frontend Repo ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Edev -->
+        <article class="project-card">
+          <h3 class="project-title">
+            <span>🌊</span> Blog Edev
+          </h3>
+          <p class="project-desc">
+            Blog estático de alto rendimiento creado con Next.js App Router, generación estática de Markdown (SSG), integración con gray-matter y estética marina navy blue personalizada.
+          </p>
+          <div class="project-tags">
+            <span class="profile-tag">Next.js</span>
+            <span class="profile-tag">React</span>
+            <span class="profile-tag">Markdown</span>
+            <span class="profile-tag">CSS3</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/lolxde121/Blog_edev" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver Repositorio ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- NeetCode Submissions -->
+        <article class="project-card">
+          <h3 class="project-title">
+            <span>🧩</span> Algoritmos & NeetCode
+          </h3>
+          <p class="project-desc">
+            Colección estructurada de soluciones óptimas a problemas de estructuras de datos y algoritmos en JavaScript y Python (Hash Maps, Trees, Graphs, Two Pointers).
+          </p>
+          <div class="project-tags">
+            <span class="profile-tag">JavaScript</span>
+            <span class="profile-tag">Python</span>
+            <span class="profile-tag">Data Structures</span>
+            <span class="profile-tag">Big-O</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/lolxde121/neetcode-submissions" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver Repositorio ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stack Tecnológico & Habilidades -->
+    <section class="section-wrapper" id="habilidades">
+      <div class="section-header">
+        <h2 class="section-title">Stack Tecnológico & Áreas de Dominio</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <span>💻</span> Lenguajes de Programación
+          </h3>
+          <div class="skill-list">
+            <span class="skill-item">Java</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">JavaScript (ES6+)</span>
+            <span class="skill-item">C / C++</span>
+            <span class="skill-item">Kotlin</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <span>🖥️</span> Sistemas & Redes
+          </h3>
+          <div class="skill-list">
+            <span class="skill-item">Linux (Arch / Ubuntu)</span>
+            <span class="skill-item">Cisco Packet Tracer</span>
+            <span class="skill-item">OSPF / EIGRP</span>
+            <span class="skill-item">VLANs (802.1Q)</span>
+            <span class="skill-item">Wireshark</span>
+            <span class="skill-item">Windows OS Support</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <span>☁️</span> Cloud, IoT & Herramientas
+          </h3>
+          <div class="skill-list">
+            <span class="skill-item">AWS EC2</span>
+            <span class="skill-item">Apache Web Server</span>
+            <span class="skill-item">Let's Encrypt / SSL</span>
+            <span class="skill-item">Arduino / Tinkercad</span>
+            <span class="skill-item">Git & GitHub</span>
+            <span class="skill-item">Docker & Crontab</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section-wrapper" id="contacto">
+      <div class="profile-card" style="text-align: center; flex-direction: column; padding: 2.5rem 1.5rem;">
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">
+          ¿Hablamos sobre un proyecto o colaboración?
+        </h2>
+        <p style="color: var(--text-secondary); max-width: 550px; margin: 0 auto 1.5rem; font-size: 0.95rem;">
+          Siempre estoy abierto a conectar con otros desarrolladores, participar en proyectos de software o conversar sobre sistemas, redes e innovación tecnológica.
+        </p>
+        <div class="profile-links" style="justify-content: center;">
+          <a href="mailto:solisesgar31@gmail.com" class="profile-link-btn btn-primary">
+            <span>✉️</span>
+            <span>solisesgar31@gmail.com</span>
+          </a>
+          <button onclick="copyEmail()" class="profile-link-btn">
+            <span>📋</span>
+            <span>Copiar Email</span>
+          </button>
+          <a href="https://github.com/lolxde121" target="_blank" rel="noopener noreferrer" class="profile-link-btn">
+            <span>💻</span>
+            <span>Perfil de GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Edgar Solís Hernández (Edev). Desarrollado con diseño marino 🌊</p>
+      <div class="footer-links">
+        <a href="#inicio" class="footer-link">Inicio</a>
+        <a href="#cursos" class="footer-link">Cursos</a>
+        <a href="#proyectos" class="footer-link">Proyectos</a>
+        <a href="https://lolxde121.github.io/Blog_edev/" target="_blank" rel="noopener noreferrer" class="footer-link">Blog Personal</a>
+        <a href="https://github.com/lolxde121" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal para detalles de curso -->
+  <div class="modal-overlay" id="course-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()" aria-label="Cerrar modal">✕</button>
+      <div id="modal-body">
+        <!-- Inyectado por JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast flotante de notificación -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Script interactivo -->
+  <script src="app.js"></script>
+</body>
+</html>
