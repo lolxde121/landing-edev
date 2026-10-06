@@ -126,7 +126,7 @@ function renderCourses(filter = 'all') {
     : coursesData.filter(course => course.category === filter);
 
   container.innerHTML = filtered.map(course => `
-    <article class="course-card" data-id="${course.id}">
+    <article class="course-card" data-id="${course.id}" style="cursor:default">
       <div class="course-header">
         <div class="course-badge-container">
           <span class="course-badge ${course.badgeType}">
@@ -203,11 +203,11 @@ window.openCourseModal = function(courseId) {
 
     <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; justify-content: flex-end; padding-top: 1rem; border-top: 1px solid var(--card-border);">
       ${course.certificateUrl ? `
-        <a href="${course.certificateUrl}" target="_blank" class="profile-link-btn btn-primary" style="font-size: 0.85rem;">
+        <a href="${course.certificateUrl}" target="_blank" class="hero-btn hero-btn--primary" style="font-size:0.85rem;">
           <span>📜</span> Descargar / Ver Certificado
         </a>
       ` : ''}
-      <button class="profile-link-btn" onclick="closeModal()">Cerrar</button>
+      <button class="hero-btn" onclick="closeModal()">Cerrar</button>
     </div>
   `;
 
