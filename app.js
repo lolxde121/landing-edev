@@ -248,16 +248,7 @@ function showToast(msg) {
 document.addEventListener('DOMContentLoaded', () => {
   renderCourses('all');
 
-  // Filtros
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filterValue = btn.getAttribute('data-filter');
-      renderCourses(filterValue);
-    });
-  });
+
 
   // Cerrar modal al hacer click fuera
   const modal = document.getElementById('course-modal');
